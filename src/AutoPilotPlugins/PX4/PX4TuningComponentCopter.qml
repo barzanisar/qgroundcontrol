@@ -61,26 +61,151 @@ SetupPage {
                         max:            15
                         step:           1
                     }
-                    /*
-  These seem to have disappeared from PX4 firmware!
+                    
                     ListElement {
-                        title:          qsTr("Roll sensitivity")
-                        description:    qsTr("Slide to the left to make roll control faster and more accurate. Slide to the right if roll oscillates or is too twitchy.")
-                        param:          "MC_ROLL_TC"
-                        min:            0.15
-                        max:            0.25
-                        step:           0.01
+                        title:          qsTr("MC_ROLL_P")
+                        description:    qsTr("Roll P gain")
+                        param:          "MC_ROLL_P"
+                        min:            2.0
+                        max:            8.0
+                        step:           0.5
                     }
 
                     ListElement {
-                        title:          qsTr("Pitch sensitivity")
-                        description:    qsTr("Slide to the left to make pitch control faster and more accurate. Slide to the right if pitch oscillates or is too twitchy.")
-                        param:          "MC_PITCH_TC"
-                        min:            0.15
-                        max:            0.25
-                        step:           0.01
+                        title:          qsTr("MC_PITCH_P")
+                        description:    qsTr("Pitch P gain")
+                        param:          "MC_PITCH_P"
+                        min:            2.0
+                        max:            8.0
+                        step:           0.5
                     }
-*/
+
+                    ListElement {
+                        title:          qsTr("MC_ROLLRATE_P")
+                        description:    qsTr("Roll rate P gain")
+                        param:          "MC_ROLLRATE_P"
+                        min:            0.05
+                        max:            0.5
+                        step:           0.05
+                    }
+
+                    ListElement {
+                        title:          qsTr("MC_PITCHRATE_P")
+                        description:    qsTr("Pitch rate P gain")
+                        param:          "MC_PITCHRATE_P"
+                        min:            0.05
+                        max:            0.5
+                        step:           0.05
+                    }
+
+                    ListElement {
+                        title:          qsTr("MC_ROLLRATE_I")
+                        description:    qsTr("Roll rate I gain")
+                        param:          "MC_ROLLRATE_I"
+                        min:            0.0
+                        max:            0.5
+                        step:           0.05
+                    }
+
+                    ListElement {
+                        title:          qsTr("MC_PITCHRATE_I")
+                        description:    qsTr("Pitch rate I gain")
+                        param:          "MC_PITCHRATE_I"
+                        min:            0.0
+                        max:            0.5
+                        step:           0.05
+                    }
+
+                    ListElement {
+                        title:          qsTr("MC_ROLLRATE_D")
+                        description:    qsTr("Roll rate D gain")
+                        param:          "MC_ROLLRATE_D"
+                        min:            0.0
+                        max:            0.01
+                        step:           0.0005
+                    }
+
+                    ListElement {
+                        title:          qsTr("MC_PITCHRATE_D")
+                        description:    qsTr("Pitch rate D gain")
+                        param:          "MC_PITCHRATE_D"
+                        min:            0.0
+                        max:            0.01
+                        step:           0.0005
+                    }
+
+                    ListElement {
+                        title:          qsTr("MC_ROLLRATE_FF")
+                        description:    qsTr("Roll rate feedforward: Improves tracking performance.")
+                        param:          "MC_ROLLRATE_FF"
+                        min:            0.0
+                        max:            0.4
+                        step:           0.05
+                    }
+
+                    ListElement {
+                        title:          qsTr("MC_PITCHRATE_FF")
+                        description:    qsTr("Pitch rate feedforward: Improves tracking performance.")
+                        param:          "MC_PITCHRATE_FF"
+                        min:            0.0
+                        max:            0.4
+                        step:           0.05
+                    }
+
+                    ListElement {
+                        title:          qsTr("MC_YAW_P")
+                        description:    qsTr("Yaw P gain")
+                        param:          "MC_YAW_P"
+                        min:            0.0
+                        max:            8.0
+                        step:           0.5
+                    }
+
+                    ListElement {
+                        title:          qsTr("MC_YAWRATE_P")
+                        description:    qsTr("Yaw rate P gain")
+                        param:          "MC_YAWRATE_P"
+                        min:            0.0
+                        max:            0.5
+                        step:           0.05
+                    }
+
+                    ListElement {
+                        title:          qsTr("MC_YAWRATE_I")
+                        description:    qsTr("Yaw rate I gain")
+                        param:          "MC_YAWRATE_I"
+                        min:            0.0
+                        max:            0.5
+                        step:           0.05
+                    }
+
+                    ListElement {
+                        title:          qsTr("MC_YAWRATE_D")
+                        description:    qsTr("Yaw rate D gain")
+                        param:          "MC_YAWRATE_D"
+                        min:            0.0
+                        max:            0.01
+                        step:           0.0005
+                    }
+
+                    ListElement {
+                        title:          qsTr("MC_YAW_FF")
+                        description:    qsTr("Yaw feedforward: Improves tracking performance.")
+                        param:          "MC_YAW_FF"
+                        min:            0.0
+                        max:            1.0
+                        step:           0.05
+                    }
+
+                    ListElement {
+                        title:          qsTr("MC_YAWRATE_FF")
+                        description:    qsTr("Yaw rate feedforward: Improves tracking performance.")
+                        param:          "MC_YAWRATE_FF"
+                        min:            0.0
+                        max:            0.4
+                        step:           0.05
+                    }
+
                 }
             }
 
